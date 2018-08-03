@@ -21,8 +21,8 @@
 			</div>
 			<div class="middle_b2">
 				<div class="middle_b2_ph">
-					<p>普通登录</p>
-					<p>快速登录</p>
+					<p id="pt">普通登录</p>
+					<p id="ks">快速登录</p>
 				</div>
 			</div>
 			<div class="middle_b3">
@@ -40,7 +40,27 @@
 						<input type="submit" value="登 录">
 					</div>
 				</form>
-				<div class="middle_b3_b">
+				<form class="middle_b3_b">
+					<div class="middle_b3_b1">
+						<input type="text" id="phone1" placeholder="  请输入手机号">
+						<span id="phone_a1"></span>
+						<p id="box" onclick="tox()">获取短信验证码</p>
+					</div>
+					<div class="middle_b3_b2">
+						<input type="text" id="pass" placeholder="  验证码">
+						<span id="pass_a"></span>
+						<p ><img id="imgId" src="img/zhuce/CalculateValidateCode (1).jpg"></p>
+						<a href="#" onclick="testf()">看不清?换一张</a>
+					</div>
+					<div class="middle_b3_b3">
+						<input type="text"  placeholder="  请输入手机验证码">
+						<span id="phone_a"></span>
+					</div>
+					<div class="middle_b3_b4">
+						<input type="submit" value="登 录">
+					</div>
+				</form>
+				<div class="middle_b3_c">
 					<h2>使用合作网站账号登录凡客</h2>
 					<a href="#"></a>
 					<a href="#"></a>
@@ -65,3 +85,86 @@
 	</div>
 </body>
 </html>
+<script type="text/javascript" src="js/tools.js"></script>
+<script type="text/javascript">
+	function testf(){
+		let arr=["CalculateValidateCode (1).jpg","CalculateValidateCode (2).jpg","CalculateValidateCode (3).jpg","CalculateValidateCode (4).jpg","CalculateValidateCode (5).jpg","CalculateValidateCode (6).jpg","CalculateValidateCode (7).jpg","CalculateValidateCode (8).jpg","CalculateValidateCode (9).jpg","CalculateValidateCode (10).jpg","CalculateValidateCode (11).jpg","CalculateValidateCode (12).jpg","CalculateValidateCode (13).jpg","CalculateValidateCode (14).jpg","CalculateValidateCode (15).jpg","CalculateValidateCode (16).jpg","CalculateValidateCode (17).jpg","CalculateValidateCode (18).jpg","CalculateValidateCode (19).jpg","CalculateValidateCode (20).jpg","CalculateValidateCode (21).jpg","CalculateValidateCode (22).jpg","CalculateValidateCode (23).jpg","CalculateValidateCode (24).jpg","CalculateValidateCode (25).jpg","CalculateValidateCode (26).jpg","CalculateValidateCode (27).jpg","CalculateValidateCode (28).jpg","CalculateValidateCode (29).jpg","CalculateValidateCode (30).jpg","CalculateValidateCode (31).jpg","CalculateValidateCode (32).jpg","CalculateValidateCode (33).jpg","CalculateValidateCode (34).jpg","CalculateValidateCode (35).jpg","CalculateValidateCode (36).jpg","CalculateValidateCode (37).jpg","CalculateValidateCode (38).jpg","CalculateValidateCode (39).jpg","CalculateValidateCode (40).jpg","CalculateValidateCode (41).jpg","CalculateValidateCode (42).jpg","CalculateValidateCode (43).jpg","CalculateValidateCode (44).jpg","CalculateValidateCode (45).jpg","Calc	ulateValidateCode (46).jpg","CalculateValidateCode (0).jpg"];
+	var num=parseInt(Math.random()*arr.length);
+	$("#imgId").src="img/zhuce/CalculateValidateCode ("+num+").jpg";
+}
+
+
+	function tox(){
+		let myTimer=null;
+		let seconds=59;
+		// myTimer=0;
+		$("#box").innerHTML=seconds;
+		$("#box").style.fontSize="14px";
+				myTimer=setInterval(function(){
+				seconds--;
+				$("#box").innerHTML=seconds;
+				if(seconds<=0){
+					clearInterval(myTimer);
+					$("#box").innerHTML="获取短信验证码";
+				}
+			},1000);
+		}
+
+window.onload=function(){
+	ts();
+}
+		function ts(){
+			$("#pt").onclick=function(){
+				$(".middle_b3_a")[0].style.display="block";
+				$("#pt").style.backgroundColor="#b42025";
+				$("#pt").style.color="#fff";
+				$(".middle_b3_b")[0].style.display="none";
+				$("#ks").style.backgroundColor="#f5f5f5";
+				$("#ks").style.color="#656565";
+			}
+			$("#ks").onclick=function(){
+				$(".middle_b3_a")[0].style.display="none";
+				$("#ks").style.backgroundColor="#b42025";
+				$("#ks").style.color="#fff";
+				$(".middle_b3_b")[0].style.display="block";
+				$("#pt").style.backgroundColor="#f5f5f5";
+				$("#pt").style.color="#656565";
+			}
+		}
+
+$("#phone").onblur=function(){
+	$("#phone_a").innerHTML="";
+	var reg=/^1{3|4|5|7|8|9}\d{9}$/;
+	if(reg.test(this.value)==false){
+		$("#phone_a").innerHTML="* 您输入的手机号有误";
+		$("#phone_a").style.color="red";
+	}else{
+		$("#phone_a").innerHTML="√";
+		$("#phone_a").style.color="#15fb25";
+	}
+}
+$("#phone1").onblur=function(){
+	$("#phone_a1").innerHTML="";
+	var reg=/^1{3|4|5|7|8|9}\d{9}$/;
+	if(reg.test(this.value)==false){
+		$("#phone_a1").innerHTML="* 您输入的手机号有误";
+		$("#phone_a1").style.color="red";
+	}else{
+		$("#phone_a1").innerHTML="√";
+		$("#phone_a1").style.color="#15fb25";
+	}
+}
+$("#pass").onblur=function(){
+	var str=$("#pass").value;
+	$("#pass_a").innerHTML="";
+	var reg=/^[A-Za-z0-9]\w{6,15}$/;
+	if(reg.test(this.value)==false){
+		$("#pass_a").innerHTML="* 您输入的密码有误";
+		$("#pass_a").style.color="red";
+	}else {
+		$("#pass_a").innerHTML="√";
+		$("#pass_a").style.color="#15fb25";
+	}
+}
+
+</script>
