@@ -1,0 +1,159 @@
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, table, tr, td, th, ol, ul, li, dl, dd, dt, label, input, fieldset, hr, form {
+  margin: 0;
+  padding: 0;
+}
+.peak{
+	width: 1200px;
+	height: 40px;
+	padding-top: 15px;
+	margin: 0 auto;
+	border-bottom: 1px solid #7a7f89;
+	img{
+	width: 311px;
+	height: 39px;
+	float: left;
+	margin-right: 550px;
+	}
+	p{
+		color: #666;
+		font-size: 12px;
+		line-height: 39px;
+		float: left;
+	}
+	a:nth-child(3){
+		color: #a10000;
+    	padding: 0 5px;
+		line-height:39px;
+		float: left;
+		font-size: 12px;
+	}
+	a:nth-child(4){
+		color: #a10000;
+		line-height:39px;
+		float: left;
+		font-size: 12px;
+		margin-right: 50px;
+	}
+	a:nth-child(5){
+		color: #333;
+		line-height:39px;
+		float: left;
+		font-size: 12px;
+	}
+}
+.message{
+	height: 28px;
+    width: 1200px;
+    margin: 0 auto;
+    .message_a{
+    	height: 28px;
+    	width: 540px;
+    	margin-top: 10px;
+    	background: url(../img/shopping/1.png) no-repeat;
+    }
+    p{
+    	float: left;
+    	width: 170px;
+    	height: 28px;
+    	font-size: 12px;
+    	color: #fff;
+    	text-align: center;
+    	line-height: 28px;
+    	font-weight: 600;
+    }
+    p:nth-child(2){
+    	color: #333;
+    	font-weight: 600;
+    }
+ 	p:nth-child(3){
+    	color: #333;
+    	font-weight: 600;
+    }
+ }
+ .gwc{
+ 	width: 1200px;
+ 	margin: 10px auto 0;
+
+ 	.gwc_a{
+ 		width: 1200px;
+ 		height: 30px;
+ 		h2{
+			font-size: 18px;
+			line-height: 38px;
+			color: #333;
+ 		}
+ 		img{
+ 			float: left;
+ 			margin-right: 5px;
+ 		}
+ 	}
+ 	.gwc_b{
+ 		margin-top: 6px;
+    	color: #656565;
+    	line-height: 20px;
+    	font-size: 12px;
+    	span{
+ 			color: #a10000;
+ 		}
+ 	}
+	.gwc_c{
+		margin-top: 10px;
+		border: 1px solid #dcdfe4;
+		.gwc_c1{
+			width: 1200px;
+			height: 39px;
+			background: url(../img/shopping/3.png) repeat-x;
+			font-size: 13px;
+			color: #333;
+			line-height: 39px;
+			margin-bottom: 21px;
+			input{
+				line-height: 39px;
+				margin-left: 16px;
+				margin-right: 5px;
+			}
+			span:nth-child(2){
+				margin-right: 250px
+			}
+			span:nth-child(3){
+				margin-right: 190px
+			}
+			span:nth-child(4){
+				margin-right: 80px
+			}
+			span:nth-child(5){
+				margin-right: 80px
+			}
+			span:nth-child(6){
+				margin-right: 65px
+			}
+			span:nth-child(7){
+				margin-right: 85px
+			}
+			span:nth-child(8){
+				margin-right: 90px
+			}
+		}
+		.gwc_c2{
+
+			input{
+				line-height: 70px;
+				vertical-align: middle;
+				height: 70px;
+				display: block;
+			}
+		}
+	}
+ }

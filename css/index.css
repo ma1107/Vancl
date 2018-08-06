@@ -466,6 +466,11 @@ html, body, p, h1, h2, h3, h4, h5, h6, table, tr, td, th, ol, ul, li, dl, dd, dt
     display: inline;
     margin-right: 15px;
     margin-bottom: 20px;
+    transition: 0.5S;
+}
+.xz_b1:hover{
+	transform:translate3d(0px, -8px, -8px);
+	box-shadow: 0px 5px 5px #ddd;
 }
 .xz_b1 a{
 	display: block;
