@@ -266,7 +266,7 @@ html, body, p, h1, h2, h3, h4, h5, h6, table, tr, td, th, ol, ul, li, dl, dd, dt
 }
 .yf{
 	width: 1200px;
-	height: 480px;
+	height: 460px;
 	margin: 0 auto 8px;
 	border-bottom: 1px solid #e5e6e6;
 }
@@ -277,7 +277,7 @@ html, body, p, h1, h2, h3, h4, h5, h6, table, tr, td, th, ol, ul, li, dl, dd, dt
 .imgdet{
     position: relative;
     height: 400px;
-    width: 630px;
+    width: 620px;
 	margin: 40px auto 0;
     background: #fff;
    
@@ -371,10 +371,10 @@ html, body, p, h1, h2, h3, h4, h5, h6, table, tr, td, th, ol, ul, li, dl, dd, dt
 .xuanxiang{
 	float: left;
 	margin-top: 40px;
-	width: 570px;
+	width: 560px;
 }
 .xuanxiang_a{
-	width: 570px;
+	width: 560px;
 	height: 26px;
 }
 .xuanxiang_a p{

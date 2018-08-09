@@ -10,7 +10,7 @@ $("#yz").onblur=function(){
 	}
 }
 
-$("#phone").onblur=function(){
+$("#userphone").onblur=function(){
 	$("#phone_a").innerHTML="";
 	var reg=/^1{3|4|5|7|8|9}\d{9}$/;
 	if(reg.test(this.value)==false){
@@ -21,8 +21,8 @@ $("#phone").onblur=function(){
 		$("#phone_a").style.color="#15fb25";
 	}
 }
-$("#pass").onblur=function(){
-	var str=$("#pass").value;
+$("#userpass").onblur=function(){
+	var str=$("#userpass").value;
 	$("#pass_a").innerHTML="";
 	var reg=/^[A-Za-z0-9]\w{6,15}$/;
 	if(reg.test(this.value)==false){
@@ -45,7 +45,7 @@ $("#zpass").onblur=function(){
 		var str=$("#zpass").value;
 		if(str==""){
 			$("#zpass_a").innerHTML="请输入密码";
-		}else if(str!=$("#pass").value){
+		}else if(str!=$("#userpass").value){
 			$("#zpass_a").innerHTML="输入的密码不一致";
 			$("#zpass_a").style.color="red";
 		}else{

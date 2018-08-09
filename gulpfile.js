@@ -8,10 +8,10 @@ gulp.task("copy-html",function(){
 });
 
 //复制css
-// gulp.task("copycss",function(){
-// 	gulp.src("css/*.css").pipe(gulp.dest("D:\\phpStudy\\WWW\\vancl\\css"));
+gulp.task("copycss",function(){
+	gulp.src("css/*.css").pipe(gulp.dest("D:\\phpStudy\\WWW\\vancl\\css"));
 	
-// });
+});
 // 复制图片
 gulp.task("copyimg",function(){
 	gulp.src("img/**/*.{jpg,png}").pipe(gulp.dest("D:\\phpStudy\\WWW\\vancl\\img"));
@@ -40,4 +40,5 @@ gulp.task("watchall",function(){
 	gulp.watch("js/*.js",["copyjs"]);
 	gulp.watch("css/*.css",["copycss"]);
 	gulp.watch("scss/*.scss",["scssfile"]);
+	// gulp.watch("php/*.php",["copyphp"]);
 });
